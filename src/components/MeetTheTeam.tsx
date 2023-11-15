@@ -7,7 +7,18 @@ const team = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     linkedinUrl: 'https://uk.linkedin.com/in/adam-sargent-mba-8b980154',
-    bio: 'With 15 years industry expertise, Adam has been making waves as Executive Producer at major studios and agencies, most recently running a slate of Marvel shows at Framestore. Currently, Adam serves as Executive Producer at Unit 9, focusing on cutting-edge technology for brands, pioneering AI projects for giants like Pepsi and Meta.',
+    bio: (
+      <>
+        With 15 years industry expertise, Adam has been making waves as
+        Executive Producer at major studios and agencies, most recently running
+        a slate of Marvel shows at Framestore.
+        <br />
+        <br />
+        Currently, Adam serves as Executive Producer at Unit 9, focusing on
+        cutting-edge technology for brands, pioneering AI projects for giants
+        like Pepsi and Meta.
+      </>
+    ),
   },
   {
     name: 'Campbell Beaton',
@@ -15,7 +26,17 @@ const team = [
     imageUrl:
       'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
     websiteUrl: 'https://www.campbellbeaton.com/',
-    bio: 'Highly regarded as a leading freelance Executive Producer, Campbell has been the powerhouse behind some of the most innovative campaigns in global advertising. Having worked previously with Apple, Burberry, and Google, he now manages a complex portfolio of projects with various usage requirements.',
+    bio: (
+      <>
+        Highly regarded as a leading freelance Executive Producer, Campbell has
+        been the powerhouse behind some of the most innovative campaigns in
+        global advertising.
+        <br />
+        <br />
+        Having worked previously with Apple, Burberry, and Google, he now
+        manages a complex portfolio of projects with various usage requirements.
+      </>
+    ),
   },
 ]
 
@@ -24,26 +45,28 @@ export function MeetTheTeam() {
     <section
       id="meet-the-team"
       aria-label="Meet the team"
-      className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      className="bg-white py-24 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl md:text-center">
             Meet the team
           </h2>
+        </div>
 
-          <ul
-            role="list"
-            className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none"
-          >
-            {team.map((person) => (
-              <li key={person.name}>
-                <img
-                  className="aspect-[3/2] w-full rounded-2xl object-cover"
-                  src={person.imageUrl}
-                  alt={person.name}
-                />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+        <ul
+          role="list"
+          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:max-w-4xl lg:gap-x-8 xl:max-w-none"
+        >
+          {team.map((person) => (
+            <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
+              <img
+                className="aspect-[4/5] max-h-64 w-52 flex-none rounded-2xl object-cover"
+                src={person.imageUrl}
+                alt={person.name}
+              />
+              <div className="flex-auto">
+                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
                   {person.name}
                 </h3>
                 <p className="text-base leading-7 text-gray-600">
@@ -100,10 +123,10 @@ export function MeetTheTeam() {
                     </li>
                   )}
                 </ul>
-              </li>
-            ))}
-          </ul>
-        </div>
+              </div>
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   )
