@@ -1,11 +1,14 @@
+import Image from 'next/image'
 import { Container } from './Container'
+
+import imageAdam from '@/images/headshots/adam.jpg'
+import imageCampbell from '@/images/headshots/campbell.jpg'
 
 const team = [
   {
     name: 'Adam Sargent',
     role: 'Founder & CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: imageAdam,
     linkedinUrl: 'https://uk.linkedin.com/in/adam-sargent-mba-8b980154',
     bio: (
       <>
@@ -23,18 +26,24 @@ const team = [
   {
     name: 'Campbell Beaton',
     role: 'Founder & COO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+    image: imageCampbell,
     websiteUrl: 'https://www.campbellbeaton.com/',
     bio: (
       <>
-        Highly regarded as a leading freelance Executive Producer, Campbell has
-        been the powerhouse behind some of the most innovative campaigns in
-        global advertising.
+        Highly regarded as a leading freelance Executive Producer and Director,
+        Campbell has been the powerhouse behind some of the most innovative
+        campaigns in global advertising.
         <br />
         <br />
-        Having worked previously with Apple, Burberry, and Google, he now
-        manages a complex portfolio of projects with various usage requirements.
+        Managing a complex portfolio of projects with various usage
+        requirements, Campbell has overseen productions in the UK, US, and
+        beyond. With agency experience from Dare and direct-to-client expertise,
+        he has worked on commercials for the likes of Apple, Burberry, Google,
+        Mercedes, and Dolce & Gabbana for Mario Testino, and promos for artists
+        from Professor Green to Unkle. Campbell produced the film Hot Property,
+        which showcased at the London Comedy Festival, as well as award-winning
+        VR projects that include the 2017 Cannes Grand Prix winner, Not Get,
+        starring Björk.
       </>
     ),
   },
@@ -60,9 +69,9 @@ export function MeetTheTeam() {
         >
           {team.map((person) => (
             <li key={person.name} className="flex flex-col gap-6 xl:flex-row">
-              <img
+              <Image
                 className="aspect-[4/5] max-h-64 w-52 flex-none rounded-2xl object-cover"
-                src={person.imageUrl}
+                src={person.image}
                 alt={person.name}
               />
               <div className="flex-auto">

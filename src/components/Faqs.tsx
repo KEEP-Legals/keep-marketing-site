@@ -2,23 +2,24 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
+import { Button } from './Button'
 
 const faqs = [
   [
+    {
+      question: 'How does the platform make renewals easy?',
+      answer:
+        'Our platform streamlines the contract renewal process. You can set up automated reminders, easily extend or renew usage contracts at the click of a button, and maintain a clear overview of your renewal schedule.',
+    },
     {
       question: 'Is the platform easy to use?',
       answer:
         'Yes. Our intuitive platform is designed to take the headache out of usage rights management. Speak with one of our experts for a walk-through tutorial to see the platform in action.',
     },
     {
-      question: 'How does the platform simplify invoicing?',
+      question: 'Can I use my own contracts?',
       answer:
-        'KEEP consolidates client payments into a single invoice and resolves the challenge of attributing costs across different IP creators and talent streams. The platform pays talent directly, automating billing across parties, so you can focus on creative endeavours without the headache of invoicing logistics.',
-    },
-    {
-      question: 'How does KEEP guarantee the secure storage of contracts?',
-      answer:
-        'Security is a top priority at KEEP. We utilise state-of-the-art data protection measures to ensure the confidentiality and integrity of your contracts. Our platform is hosted on secure cloud-based servers, with annual security audits conducted. We are fully compliant with GDPR regulations. Read our Privacy Policy to find out more.',
+        'Yes, we offer total flexibility. You can onboard your existing contracts, create new ones, or customise templates to fit your needs.',
     },
   ],
   [
@@ -29,20 +30,20 @@ const faqs = [
         'Absolutely. Our walled garden security access gives you complete control over permissions during collaboration; you designate who can view, edit, or sign contracts.',
     },
     {
+      question: 'How does the platform simplify invoicing?',
+      answer:
+        'By consolidating client payments into a single invoice, we resolve the challenge of attributing costs across different IP creators. Billing is automated with talent paid directly, so you can focus on creative endeavours.',
+    },
+    {
       question:
         'Does the platform offer approval and authorisation features within projects?',
       answer:
         'Yes. Our platform enables project budgeting and client approvals, ensuring streamlined workflows for your projects.',
     },
     {
-      question: 'Can I use my own contracts?',
+      question: 'How does KEEP guarantee the secure storage of contracts?',
       answer:
-        'You have the flexibility to onboard your existing contracts, create new ones from scratch, or customise templates to suit your needs. KEEP is thoughtfully designed to simplify your usage rights management, and that includes integrating current agreements onto the platform.',
-    },
-    {
-      question: 'How does the platform make renewals easy?',
-      answer:
-        'Our platform streamlines the contract renewal process. You can set up automated reminders, easily extend or renew usage contracts at the click of a button, and maintain a clear overview of your renewal schedule.',
+        'We employ advanced protection measures to ensure the integrity of your data: we host our platform on secure cloud-based servers, conduct annual security audits, and ensure full GDPR compliance. Read our Privacy Policy for details.',
     },
   ],
   [
@@ -53,14 +54,14 @@ const faqs = [
         'Our centralised platform ensures that contracts are always accessible and never lost. Contracts remain secure and can be easily transferred to new team members or stakeholders.',
     },
     {
-      question: 'How can I join the platform?',
-      answer:
-        'Choose from our project-based access or subscription service. Our project model is based upon a 4% usage fee per contract, calculated from the total rights contract value. Our subscription model is a 360-degree service managing contracts from origination to renewal, with fees based upon client usage and project size. Get in touch to explore which model is right for you.',
-    },
-    {
       question: 'Do you offer bespoke contracting and services?',
       answer:
         'Yes. We can offer services ranging from bespoke contracting to consultancy on complex usage rights. Contact our team to find out more.',
+    },
+    {
+      question: 'How can I join the platform?',
+      answer:
+        'We offer two services: project-based access or subscription. Our project model is calculated on a 4% fee of the total contract value. Our subscription manages contracts from origin to renewal, with fees based on usage and project size. Contact us to explore the right model for you.',
     },
   ],
 ]
@@ -89,9 +90,12 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            Can&apos;t find what you&apos;re looking for? Contact us for more
+            information.
           </p>
+          <Button className="mt-4" href="#contact-us">
+            Get in touch
+          </Button>
         </div>
         <ul
           role="list"

@@ -8,7 +8,7 @@ export function Logo(props: React.ComponentPropsWithoutRef<'svg'>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_1521_664)">
+      <g clipPath="url(#clip0_1521_664)">
         <path
           d="M69.7543 12.8537V24.3588H54.667V27.9832H63.3906V38.1397H54.667V41.5533H69.7543V53.1006H49.989L37.6832 40.4997V25.0753L49.7362 12.8537H69.7543Z"
           fill="#442059"

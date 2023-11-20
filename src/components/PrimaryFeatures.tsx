@@ -7,35 +7,35 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotSecure from '@/images/screenshots/secure.png'
+import screenshotStreamlined from '@/images/screenshots/streamlined.png'
+import screenshotCollaborative from '@/images/screenshots/collaborative.png'
+import screenshotAutomated from '@/images/screenshots/automated.png'
 
 const features = [
   {
     title: 'KEEP it secure',
     description:
       'Safeguard usage rights with bespoke or templated contracts from leading media law firms via our secure asset management tool.',
-    image: screenshotPayroll,
+    image: screenshotSecure,
   },
   {
     title: 'KEEP it streamlined',
     description:
-      'Easily onboard contracts from existing clients. Streamline payments into a single invoice and let the platform process payments directly to IP creators.',
-    image: screenshotExpenses,
+      'Easily onboard contracts from existing clients. Streamline payments into a single invoice, with talent paid directly by the platform.',
+    image: screenshotStreamlined,
   },
   {
     title: 'KEEP it collaborative',
     description:
-      'Generate, send, and store contracts in one centralised location. Collaborate and customise contracts with multiple stakeholders, while maintaining full control over access.',
-    image: screenshotVatReturns,
+      'Generate, send, and store contracts in a centralised location. Customise, collaborate with stakeholders, and maintain control over access.',
+    image: screenshotCollaborative,
   },
   {
     title: 'KEEP it automated',
     description:
-      'Seamlessly extend and renew contracts at a single click with automated reminders. Say goodbye to broken, incomplete, or lapsed usage contracts.',
-    image: screenshotReporting,
+      'Extend and renew contracts at a single click with automated reminders. Say goodbye to broken, incomplete, or lapsed usage contracts.',
+    image: screenshotAutomated,
   },
 ]
 
@@ -63,7 +63,7 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="bg-primary-600 relative overflow-hidden pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-primary-600 pb-28 pt-20 sm:py-32"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
@@ -76,11 +76,11 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            One platform. End-to-end usage rights management.
+            One platform. End-to-end management.
           </h2>
-          <p className="text-primary-100 mt-6 text-lg tracking-tight">
-            No more contractual insecurity. No paperwork vanishing when you need
-            it most. No budget-draining markups on usage rights management.
+          <p className="mt-6 text-lg tracking-tight text-primary-100">
+            No more contractual insecurity. No budget-draining markups on usage
+            rights management.
             <br />
             KEEP consolidates your contracts and automates the entire process of
             creation and renewal. All in one easy-to-use, customisable platform.
@@ -141,7 +141,7 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="shadow-primary-900/20 mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-primary-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
                         className="w-full"
                         src={feature.image}
