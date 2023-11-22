@@ -11,25 +11,22 @@ const mg = mailgun.client({
 
 type ResponseData = {}
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>,
 ) {
-  mg.messages
-    .create('mail.keeplegals.com', {
+  try {
+    const data = await mg.messages.create('mail.keeplegals.com', {
       from: 'Keep Legals <mailer@mail.keeplegals.com>',
       to: ['shane@ivodigital.com', 'info@keeplegals.com'],
       subject: 'Website Contact Form Submission',
       text: req.body?.message ?? 'Form Submission',
       html: `<ul><li><strong>First name:</strong> ${req.body?.first_name}</li><li><strong>Last name:</strong> ${req.body?.last_name}</li><li><strong>Company:</strong> ${req.body?.company}</li><li><strong>Email:</strong> ${req.body?.email}</li><li><strong>Message:</strong> ${req.body?.message}</li></ul>`,
     })
-    .then(
-      (data) => {
-        console.log('Submitted: ', data)
-      },
-      (err) => {
-        console.log('Error: ', err)
-      },
-    )
+    console.log('Submitted: ', data)
+  } catch (err) {
+    console.log('Error: ', err)
+  }
+
   res.status(200).json({})
 }
