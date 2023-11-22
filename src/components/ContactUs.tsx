@@ -23,9 +23,6 @@ export function ContactUs() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Get in touch
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-white">
-            Maybe we can have some text here, maybe not.
-          </p>
         </div>
         <div className="tracking-tight text-white">
           <form

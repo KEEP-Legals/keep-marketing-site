@@ -12,14 +12,18 @@ const team = [
     linkedinUrl: 'https://uk.linkedin.com/in/adam-sargent-mba-8b980154',
     bio: (
       <>
-        With 15 years industry expertise, Adam has been making waves as
-        Executive Producer at major studios and agencies, most recently running
-        a slate of Marvel shows at Framestore.
+        With 15 years industry experience, Adam has been making waves as an
+        Executive Producer, working at the top end of VFX on Harry Potter, James
+        Bond, and running a slate of Marvel shows at Framestore.
         <br />
         <br />
-        Currently, Adam serves as Executive Producer at Unit 9, focusing on
-        cutting-edge technology for brands, pioneering AI projects for giants
-        like Pepsi and Meta.
+        Adam&apos;s commercial portfolio boasts clients like Apple, Google, and
+        Burberry, while his role as Executive Producer at Unit 9 saw him
+        focusing on cutting-edge technology for brands and pioneering AI
+        projects for giants like Pepsi and Meta. Before moving into new
+        technology within entertainment, Adam&apos;s work included real-time
+        graphics and financial software for Morgan Stanley, and theme park
+        entertainment for Disney, Lionsgate, and Universal.
       </>
     ),
   },
