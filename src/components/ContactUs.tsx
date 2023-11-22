@@ -5,9 +5,11 @@ import Image from 'next/image'
 import backgroundImage from '@/images/background-features.jpg'
 import { Container } from './Container'
 import { Button } from './Button'
-import { FormEventHandler } from 'react'
+import { FormEventHandler, useState } from 'react'
 
 export function ContactUs() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     // Don't make a HTTP Request without us.
     e.preventDefault()
@@ -17,21 +19,24 @@ export function ContactUs() {
 
     const target = e.currentTarget
 
+    setIsSubmitting(true)
     fetch('/api/contact', {
       headers: {
         'Content-Type': 'application/json',
       },
       method: 'post',
       body: JSON.stringify(data),
-    }).then(
-      (response) => {
-        target.reset()
-        console.log('Success: ', response.json())
-      },
-      (err) => {
-        console.log('Err: ', err)
-      },
-    )
+    })
+      .then(
+        (response) => {
+          target.reset()
+          console.log('Success: ', response.json())
+        },
+        (err) => {
+          console.log('Err: ', err)
+        },
+      )
+      .finally(() => setIsSubmitting(false))
   }
   return (
     <section
@@ -151,7 +156,17 @@ export function ContactUs() {
             </div>
             <div className="mt-10">
               <Button className="block w-full" color="white" type="submit">
-                Let&apos;s talk
+                {isSubmitting ? (
+                  <div
+                    className="inline-block h-5 w-5 animate-spin rounded-full border-[3px] border-current border-t-transparent text-current"
+                    role="status"
+                    aria-label="loading"
+                  >
+                    <span className="sr-only">Loading...</span>
+                  </div>
+                ) : (
+                  "Let's talk"
+                )}
               </Button>
             </div>
           </form>

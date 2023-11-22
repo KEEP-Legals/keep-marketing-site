@@ -20,8 +20,8 @@ export default function handler(
       from: 'Keep Legals <mailer@mail.keeplegals.com>',
       to: ['shane@ivodigital.com', 'info@keeplegals.com'],
       subject: 'Website Contact Form Submission',
-      text: 'Hello 12345',
-      html: `<ul><li><strong>First name:</strong> ${req.body.first_name}</li><li><strong>Last name:</strong> ${req.body.last_name}</li><li><strong>Company:</strong> ${req.body.company}</li><li><strong>Email:</strong> ${req.body.email}</li><li><strong>Message:</strong> ${req.body.message}</li></ul>`,
+      text: req.body?.message ?? 'Form Submission',
+      html: `<ul><li><strong>First name:</strong> ${req.body?.first_name}</li><li><strong>Last name:</strong> ${req.body?.last_name}</li><li><strong>Company:</strong> ${req.body?.company}</li><li><strong>Email:</strong> ${req.body?.email}</li><li><strong>Message:</strong> ${req.body?.message}</li></ul>`,
     })
     .then(
       (data) => {
