@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className="bg-primary-600 relative overflow-hidden py-32"
+      className="relative overflow-hidden bg-primary-600 py-32"
     >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
@@ -27,7 +27,7 @@ export function CallToAction() {
             Unlock the power of flexible, automated usage rights contracting.
             It&apos;s time to get back to creating.
           </p>
-          <Button href="/register" color="white" className="mt-10">
+          <Button href="#contact-us" color="white" className="mt-10">
             Join the platform now
           </Button>
         </div>
