@@ -7,11 +7,11 @@ const points = [
   [
     {
       title: 'Transparent Contracting',
-      body: 'All contracts are fully transparent, allowing key stakeholders to view them easily.',
+      body: 'All contracts are fully transparent, allowing key stakeholders to view them easily and for Artist or management to sign.',
     },
     {
       title: 'Secure Payments',
-      body: 'Payments are fully secure and compliant with FCA regulations.',
+      body: 'Payments are fully secure and compliant with FCA regulations that can be made straight to Artist or Management bank accounts without delay.',
     },
     {
       title: 'Effortless Contract Management',
@@ -57,7 +57,7 @@ export function TalentContracts() {
           <p className="mt-4 text-lg tracking-tight text-slate-700">
             KEEP is the advertising industry&apos;s premier solution for
             ensuring the safety and security of contracts and payments. What
-            does this mean for IP holders (talent) and management?
+            does this mean for IP holders (talent) and Management?
           </p>
         </div>
         <ul
