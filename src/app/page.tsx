@@ -6,6 +6,7 @@ import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { MeetTheTeam } from '@/components/MeetTheTeam'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import { TalentContracts } from '@/components/TalentContracts'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         {/* <Pricing /> */}
         <Faqs />
         <ContactUs />
+        <TalentContracts />
       </main>
       <Footer />
     </>
