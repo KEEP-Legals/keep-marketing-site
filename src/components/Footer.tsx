@@ -25,7 +25,7 @@ export function Footer() {
           >
             <Image
               src={MangoPayImg}
-              className="max-h-10"
+              height={40}
               alt="Powered by MangoPay"
             />
           </Link>
