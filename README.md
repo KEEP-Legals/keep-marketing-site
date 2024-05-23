@@ -1,26 +1,33 @@
-# Salient
-
-Salient is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+# Keep Marketing Site
 
 ## Getting started
 
-To get started with this template, first install the npm dependencies:
+### Prerequisites
 
-```bash
-npm install
+* Node 20.11.0
+* Yarn 1.22.19
+
+
+### Installation
+
+1. Set correct node version:
+
+```shell
+nvm use
 ```
 
-Next, run the development server:
+2. Install all the necessary dependencies:
 
-```bash
-npm run dev
+```shell
+yarn install
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+3. Start the application:
 
-## Customizing
+```shell
+yarn dev
+```
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
 
 ## License
 
