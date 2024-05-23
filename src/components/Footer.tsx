@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import MangoPayImg from '@/images/logos/mangopay_powered.svg'
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -16,7 +18,17 @@ export function Footer() {
             </div>
           </nav>
         </div>
-        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row-reverse sm:justify-between">
+        <div className="flex flex-col items-center border-t border-slate-400/10 py-10 sm:flex-row sm:justify-between">
+          <Link
+            href="https://mangopay.com/en-gb/terms-and-conditions/e-money"
+            target="_blank"
+          >
+            <Image
+              src={MangoPayImg}
+              height={40}
+              alt="Powered by MangoPay"
+            />
+          </Link>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
             Copyright &copy; {new Date().getFullYear()} Keep Media Ltd. All
             rights reserved.
