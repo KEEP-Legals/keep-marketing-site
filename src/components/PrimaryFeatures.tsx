@@ -22,19 +22,13 @@ const features = [
   {
     title: 'KEEP it streamlined',
     description:
-      'Easily onboard contracts from existing clients. Streamline payments into a single invoice, with talent paid directly by the platform.',
+      'Easily onboard contracts from existing clients. Streamline payments into a single invoice and let the platform process payments directly to IP creators.',
     image: screenshotStreamlined,
-  },
-  {
-    title: 'KEEP it collaborative',
-    description:
-      'Generate, send, and store contracts in a centralised location. Customise, collaborate with stakeholders, and maintain control over access.',
-    image: screenshotCollaborative,
   },
   {
     title: 'KEEP it automated',
     description:
-      'Extend and renew contracts at a single click with automated reminders. Say goodbye to broken, incomplete, or lapsed usage contracts.',
+      'Seamlessly extend and renew contracts at a single click with automated reminders. Say goodbye to broken, incomplete, or lapsed usage contracts.',
     image: screenshotAutomated,
   },
 ]

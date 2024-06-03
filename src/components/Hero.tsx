@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <Container className="pb-20 pt-20 text-center lg:pb-32 lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-        Usage rights,{' '}
+        Campaign rights,{' '}
         <span className="relative whitespace-nowrap text-primary-600">
           <svg
             aria-hidden="true"
@@ -19,17 +19,11 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        The go-to contracting platform for safeguarding, simplifying, and
-        securing usage rights
+        The only online platform for safe and secure contracting and payments in
+        advertising
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/contact-us">Join the platform</Button>
-        {/* <Button
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          variant="outline"
-        >
-          Speak with an expert
-        </Button> */}
+        <Button href="/contact-us">Get a demo</Button>
       </div>
     </Container>
   )
