@@ -2,6 +2,7 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { WrapperWithTitle } from './WrapperWithTitle'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -64,16 +65,13 @@ function Plan({
   features: Array<string>
 }) {
   return (
-    <section className="order-first flex flex-col rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
-      <h3 className="mt-5 font-display text-lg ">{name}</h3>
-      <p className="mt-2 text-base">{description}</p>
+    <section className="order-first flex flex-col gap-y-2 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
+      <h3 className="font-display text-lg ">{name}</h3>
+      <p className="text-base">{description}</p>
       <p className="order-first font-display text-5xl font-light tracking-tight ">
         {price}
       </p>
-      <ul
-        role="list"
-        className="order-last mt-10 flex flex-col gap-y-3 text-sm"
-      >
+      <ul role="list" className="flex flex-col gap-y-3 text-sm">
         {features.map((feature) => (
           <li key={feature} className="flex">
             <CheckIcon />
@@ -87,7 +85,7 @@ function Plan({
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
-        Get started
+        Get in touch
       </Button>
     </section>
   )
@@ -95,69 +93,55 @@ function Plan({
 
 export function Pricing() {
   return (
-    <section
-      id="pricing"
-      aria-label="Pricing"
-      className="bg-primary-700 py-20 sm:py-32"
-    >
-      <Container>
-        <div className="md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
-            </span>{' '}
-            for everyone.
-          </h2>
-          <p className="mt-4 text-lg text-white">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
-          </p>
-        </div>
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
-          <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
-            features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
-            ]}
-          />
-          <Plan
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
-            features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
-            ]}
-          />
-          <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
-            features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
-            ]}
-          />
-        </div>
-      </Container>
-    </section>
+    <WrapperWithTitle title="Plans that scale with you">
+      <div className="bg-primary-600">
+        <Container className="py-8">
+          <div className="grid max-w-2xl grid-cols-1 gap-y-10 lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:gap-x-8">
+            <Plan
+              name="Single Project"
+              price="$0"
+              description="Good for running small projects"
+              href="/contact-us"
+              features={[
+                'Send 10 quotes and invoices',
+                'Connect up to 2 bank accounts',
+                'Track up to 15 expenses per month',
+                'Manual payroll support',
+                'Export up to 3 reports',
+              ]}
+            />
+            <Plan
+              name="Advanced Package"
+              price="$1000"
+              description="Good for medium-sized production companies"
+              href="/contact-us"
+              features={[
+                'Send 25 quotes and invoices',
+                'Connect up to 5 bank accounts',
+                'Track up to 50 expenses per month',
+                'Automated payroll support',
+                'Export up to 12 reports',
+                'Bulk reconcile transactions',
+                'Track in multiple currencies',
+              ]}
+            />
+            <Plan
+              name="Enterprise"
+              price="Custom"
+              description="Good for enterprice-sized production companies"
+              href="/contact-us"
+              features={[
+                'Unlimited users',
+                'Unlimited custom contracts',
+                'Connect up to 15 bank accounts',
+                'Track up to 200 expenses per month',
+                'Automated payroll support',
+                'Export up to 25 reports, including TPS',
+              ]}
+            />
+          </div>
+        </Container>
+      </div>
+    </WrapperWithTitle>
   )
 }

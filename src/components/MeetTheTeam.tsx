@@ -1,6 +1,7 @@
 import imageAdam from '@/images/headshots/adam.jpg'
 import imageCampbell from '@/images/headshots/campbell.jpg'
 import { ItemSection } from './ItemSection'
+import { WrapperWithTitle } from './WrapperWithTitle'
 
 const sectionItems = [
   {
@@ -61,12 +62,7 @@ const sectionItems = [
 
 export function MeetTheTeam() {
   return (
-    <section id="meet-the-team" aria-label="Meet the team">
-      <div className="mx-auto max-w-2xl py-8">
-        <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl md:text-center">
-          Where it all began
-        </h2>
-      </div>
+    <WrapperWithTitle title="Where it all began">
       {sectionItems.map((item, itemIndex) => (
         <ItemSection
           key={item.title}
@@ -78,6 +74,6 @@ export function MeetTheTeam() {
           purple={itemIndex % 2 === 0}
         />
       ))}
-    </section>
+    </WrapperWithTitle>
   )
 }

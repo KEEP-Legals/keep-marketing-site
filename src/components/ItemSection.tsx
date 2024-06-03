@@ -30,7 +30,7 @@ export function ItemSection({
     <section className={backgroundClass}>
       <Container
         id="get-started-today"
-        className="relative overflow-hidden  py-32"
+        className="relative overflow-hidden  py-32 text-left"
       >
         <div className={`flex flex-col gap-6 xl:flex-row ${reverseOrderClass}`}>
           <figure>
