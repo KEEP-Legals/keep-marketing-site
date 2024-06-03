@@ -93,7 +93,7 @@ export function Faqs() {
             Can&apos;t find what you&apos;re looking for? Contact us for more
             information.
           </p>
-          <Button className="mt-4" href="#contact-us">
+          <Button className="mt-4" href="/contact-us">
             Get in touch
           </Button>
         </div>

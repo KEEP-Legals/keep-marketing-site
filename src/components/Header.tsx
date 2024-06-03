@@ -115,7 +115,7 @@ export function Header() {
             <div className="hidden md:block">
               <NavLink href="https://app.keeplegals.com/">Sign in</NavLink>
             </div>
-            <Button href="#contact-us" color="blue">
+            <Button href="/contact-us" color="blue">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>

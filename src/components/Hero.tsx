@@ -23,7 +23,7 @@ export function Hero() {
         securing usage rights
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="#contact-us">Join the platform</Button>
+        <Button href="/contact-us">Join the platform</Button>
         {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"

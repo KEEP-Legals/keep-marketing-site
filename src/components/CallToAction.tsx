@@ -27,7 +27,7 @@ export function CallToAction() {
             Unlock the power of flexible, automated usage rights contracting.
             It&apos;s time to get back to creating.
           </p>
-          <Button href="#contact-us" color="white" className="mt-10">
+          <Button href="/contact-us" color="white" className="mt-10">
             Join the platform now
           </Button>
         </div>
