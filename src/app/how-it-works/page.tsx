@@ -1,10 +1,12 @@
-import { TalentContracts } from '@/components/TalentContracts'
+import { HowItWorksSections } from '@/components/HowItWorksSections'
+import { ArtistManagement } from '@/components/ArtistManagement'
 
 export default function HowItWorks() {
   return (
     <>
       <main>
-        <TalentContracts />
+        <HowItWorksSections />
+        <ArtistManagement />
       </main>
     </>
   )

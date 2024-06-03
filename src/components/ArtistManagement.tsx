@@ -31,7 +31,7 @@ const points = [
   [],
 ]
 
-export function TalentContracts() {
+export function ArtistManagement() {
   return (
     <section
       id="artist-management"

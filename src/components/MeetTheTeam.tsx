@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { Container } from './Container'
-
 import imageAdam from '@/images/headshots/adam.jpg'
 import imageCampbell from '@/images/headshots/campbell.jpg'
 import { ItemSection } from './ItemSection'
@@ -70,15 +67,15 @@ export function MeetTheTeam() {
           Where it all began
         </h2>
       </div>
-      {sectionItems.map((item) => (
+      {sectionItems.map((item, itemIndex) => (
         <ItemSection
           key={item.title}
           imageSource={item.imageSource}
           title={item.title}
           subtitle={item.subtitle}
           text={item.text}
-          reverseOrder={sectionItems.indexOf(item) % 2 === 0}
-          purple={sectionItems.indexOf(item) % 2 === 0}
+          reverseOrder={itemIndex % 2 === 0}
+          purple={itemIndex % 2 === 0}
         />
       ))}
     </section>
