@@ -11,7 +11,6 @@ import { TalentContracts } from '@/components/TalentContracts'
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <PrimaryFeatures />
@@ -23,7 +22,6 @@ export default function Home() {
         <ContactUs />
         <TalentContracts />
       </main>
-      <Footer />
     </>
   )
 }
