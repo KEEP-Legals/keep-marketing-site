@@ -9,7 +9,6 @@ export function NavigationOptions({
   const CustomTag = isMobile ? MobileNavLink : NavLink
   return (
     <>
-      <CustomTag href="/">Home</CustomTag>
       <CustomTag href="/how-it-works">How it works</CustomTag>
       <CustomTag href="/how-it-works/#artist-management">
         Artist management
