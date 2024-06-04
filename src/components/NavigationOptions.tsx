@@ -11,6 +11,9 @@ export function NavigationOptions({
     <>
       <CustomTag href="/">Home</CustomTag>
       <CustomTag href="/how-it-works">How it works</CustomTag>
+      <CustomTag href="/how-it-works/#artist-management">
+        Artist management
+      </CustomTag>
       <CustomTag href="/pricing">Pricing</CustomTag>
       <CustomTag href="/our-story">Our Story</CustomTag>
       <CustomTag href="/contact-us">Contact Us</CustomTag>

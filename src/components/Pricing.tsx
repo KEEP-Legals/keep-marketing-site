@@ -65,13 +65,15 @@ function Plan({
   features: Array<string>
 }) {
   return (
-    <section className="order-first flex flex-col gap-y-2 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
-      <h3 className="font-display text-lg ">{name}</h3>
-      <p className="text-base">{description}</p>
-      <p className="order-first font-display text-5xl font-light tracking-tight ">
-        {price}
-      </p>
-      <ul role="list" className="flex flex-col gap-y-3 text-sm">
+    <section className="order-first flex flex-col justify-between gap-y-4 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
+      <div>
+        <h3 className="font-display text-lg ">{name}</h3>
+        <p className="font-display text-5xl font-light tracking-tight ">
+          {price}
+        </p>
+        <p className="text-base">{description}</p>
+      </div>
+      <ul role="list" className="flex flex-col gap-y-3 text-sm text-left">
         {features.map((feature) => (
           <li key={feature} className="flex">
             <CheckIcon />
@@ -82,7 +84,6 @@ function Plan({
       <Button
         href={href}
         variant="solid"
-        className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
         Get in touch
@@ -103,11 +104,10 @@ export function Pricing() {
               description="Good for running small projects"
               href="/contact-us"
               features={[
-                'Send 10 quotes and invoices',
-                'Connect up to 2 bank accounts',
-                'Track up to 15 expenses per month',
-                'Manual payroll support',
-                'Export up to 3 reports',
+                'Up to 5 users',
+                '1 custom contract',
+                'Access to all of KEEP’s industry-approved contracts',
+                'Automatically renew projects',
               ]}
             />
             <Plan
@@ -116,13 +116,11 @@ export function Pricing() {
               description="Good for medium-sized production companies"
               href="/contact-us"
               features={[
-                'Send 25 quotes and invoices',
-                'Connect up to 5 bank accounts',
-                'Track up to 50 expenses per month',
-                'Automated payroll support',
-                'Export up to 12 reports',
-                'Bulk reconcile transactions',
-                'Track in multiple currencies',
+                'Up to 10 users',
+                '2 custom contracts',
+                'Unlimited access to all of KEEP’s industry-approved contracts',
+                'Automatically renew projects',
+                'Unlimited access to industry-standard documents, including the PIBS',
               ]}
             />
             <Plan
@@ -133,10 +131,10 @@ export function Pricing() {
               features={[
                 'Unlimited users',
                 'Unlimited custom contracts',
-                'Connect up to 15 bank accounts',
+                'Unlimited access to all of KEEP’s industry-approved contracts',
                 'Track up to 200 expenses per month',
-                'Automated payroll support',
-                'Export up to 25 reports, including TPS',
+                'Automatically renew projects',
+                'Unlimited access to industry-standard documents, including the PIBS',
               ]}
             />
           </div>
