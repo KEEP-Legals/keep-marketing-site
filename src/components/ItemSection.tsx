@@ -1,4 +1,5 @@
-import { Container } from './Container'
+import { AppearanceTransition } from '@/components/AppearanceTransition'
+import { Container } from '@/components/Container'
 import Image, { StaticImageData } from 'next/image'
 
 type ItemSectionProps = {
@@ -32,15 +33,15 @@ export function ItemSection({
         <div
           className={`flex flex-col items-center justify-center py-4 xl:flex-row xl:gap-x-8 ${reverseOrderClass}`}
         >
-          <figure className="flex items-center justify-center">
-            <Image
-              className="aspect-[4/5] flex-none object-contain sm:max-w-xl"
-              src={imageSource.src}
-              alt={imageSource.alt}
-              width={imageSource.width}
-              height={imageSource.height}
-            />
-          </figure>
+          <AppearanceTransition>
+            <figure className="flex items-center justify-center">
+              <Image
+                className="aspect-[4/5] flex-none object-contain sm:max-w-xl"
+                src={imageSource.src}
+                alt={imageSource.alt}
+              />
+            </figure>
+          </AppearanceTransition>
           <div className={`flex flex-col gap-y-6 ${textColorClass} `}>
             <h3 className="text-2xl font-semibold">{title}</h3>
             {subtitle ? (

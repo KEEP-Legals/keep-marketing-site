@@ -2,8 +2,8 @@ import imageAdam from '@/images/headshots/adam-headshot.jpg'
 import imageCampbell from '@/images/headshots/campbell-headshot.jpg'
 import undrawAgreementImage from '@/images/how-it-works/undraw_agreement.svg'
 import undrawScheduleImage from '@/images/how-it-works/undraw_schedule.svg'
-import { ItemSection } from './ItemSection'
-import { WrapperWithTitle } from './WrapperWithTitle'
+import { ItemSection } from '@/components//ItemSection'
+import { WrapperWithTitle } from '@/components//WrapperWithTitle'
 
 const sectionItems = [
   {

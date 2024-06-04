@@ -48,11 +48,8 @@ export function Button<
   variant = variant ?? ('solid' as Variant)
   color = color ?? ('slate' as Color)
 
-  className = clsx(
-    baseStyles[variant],
-    variantStyles[variant][color],
-    className,
-  )
+  const variantStylesValue = variantStyles[variant][color] as string
+  className = clsx(baseStyles[variant], variantStylesValue, className)
 
   return typeof props.href === 'undefined' ? (
     <button className={className} {...props} />

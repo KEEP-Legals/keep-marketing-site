@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { WrapperWithTitle } from './WrapperWithTitle'
+import { WrapperWithTitle } from '@/components/WrapperWithTitle'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -73,7 +73,7 @@ function Plan({
         </p>
         <p className="text-base">{description}</p>
       </div>
-      <ul role="list" className="flex flex-col gap-y-3 text-sm text-left">
+      <ul role="list" className="flex flex-col gap-y-3 text-left text-sm">
         {features.map((feature) => (
           <li key={feature} className="flex">
             <CheckIcon />
