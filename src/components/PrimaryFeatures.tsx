@@ -7,10 +7,9 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotSecure from '@/images/screenshots/secure.png'
-import screenshotStreamlined from '@/images/screenshots/streamlined.png'
-import screenshotCollaborative from '@/images/screenshots/collaborative.png'
-import screenshotAutomated from '@/images/screenshots/automated.png'
+import screenshotSecure from '@/images/screenshots/keep-it-secure.png'
+import screenshotStreamlined from '@/images/screenshots/keep-it-streamlined.png'
+import screenshotAutomated from '@/images/screenshots/keep-it-automated.png'
 
 const features = [
   {

@@ -1,5 +1,7 @@
-import imageAdam from '@/images/headshots/adam.jpg'
-import imageCampbell from '@/images/headshots/campbell.jpg'
+import imageAdam from '@/images/headshots/adam-headshot.jpg'
+import imageCampbell from '@/images/headshots/campbell-headshot.jpg'
+import undrawAgreementImage from '@/images/how-it-works/undraw_agreement.svg'
+import undrawScheduleImage from '@/images/how-it-works/undraw_schedule.svg'
 import { ItemSection } from './ItemSection'
 import { WrapperWithTitle } from './WrapperWithTitle'
 
@@ -35,8 +37,8 @@ const sectionItems = [
   {
     title: 'Where it all began',
     imageSource: {
-      src: imageCampbell,
-      alt: 'Campbell Beaton',
+      src: undrawScheduleImage,
+      alt: 'undraw Schedule',
     },
     text: `
         Our team has lived advertising production for our careers. 
@@ -47,8 +49,8 @@ const sectionItems = [
   {
     title: 'Our values',
     imageSource: {
-      src: imageCampbell,
-      alt: 'Campbell Beaton',
+      src: undrawAgreementImage,
+      alt: 'undraw agreement',
     },
     text: `
         Keep is about looking after every stakeholder in teh creative process. 
