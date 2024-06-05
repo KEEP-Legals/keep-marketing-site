@@ -27,6 +27,7 @@ export function ItemSection({
   const backgroundClass = purple ? 'bg-primary-600' : 'bg-white'
   const reverseOrderClass = reverseOrder ? 'xl:flex-row-reverse' : ''
   const textColorClass = purple ? 'text-white' : 'text-gray-900'
+
   return (
     <section className={backgroundClass}>
       <Container id="get-started-today" className="text-left">
@@ -34,7 +35,7 @@ export function ItemSection({
           className={`flex flex-col items-center justify-center py-4 xl:flex-row xl:gap-x-8 ${reverseOrderClass}`}
         >
           <AppearanceTransition>
-            <figure className="flex items-center justify-center">
+            <figure className="flex items-center justify-center py-2">
               <Image
                 className="aspect-[4/5] flex-none object-contain sm:max-w-xl"
                 src={imageSource.src}
