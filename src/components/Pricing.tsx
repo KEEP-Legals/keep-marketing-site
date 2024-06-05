@@ -70,14 +70,14 @@ function Plan({
   features: Array<React.ReactNode>
 }) {
   return (
-    <section className="order-first flex flex-col justify-between items-center gap-y-4 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
+    <section className="order-first flex flex-col items-center justify-between gap-y-4 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
       <div>
         <h3 className="font-display text-lg ">{name}</h3>
         <div>
           <p className="font-display text-5xl font-semibold tracking-tight">
             {price}
           </p>
-          <p className="font-display font-light">{priceSuffix}</p>
+          x<p className="font-display font-light">{priceSuffix}</p>
           <p className="font-display text-sm font-light">{priceComment}</p>
         </div>
         {description ? <p className="text-base">{description}</p> : <br />}
@@ -105,8 +105,8 @@ export function Pricing() {
   return (
     <WrapperWithTitle title="Plans that scale with you">
       <div className="bg-primary-600">
-        <Container className="py-8 flex justify-center">
-          <div className="grid max-w-2xl grid-cols-1 gap-y-10 lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:gap-x-8">
+        <Container className="flex justify-center py-8">
+          <div className="grid max-w-2xl grid-cols-1 gap-y-4 lg:gap-x-4 lg:max-w-none lg:grid-cols-3 xl:gap-x-8">
             <Plan
               name="Single Project"
               price="£0"

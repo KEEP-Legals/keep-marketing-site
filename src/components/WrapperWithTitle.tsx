@@ -17,7 +17,8 @@ export function WrapperWithTitle({
       id="pricing"
       aria-label="Pricing"
       className={clsx('relative overflow-hidden  py-20 text-center', {
-        'bg-primary-600': purple,
+        "bg-[url('/images/background-features.jpg')] bg-primary-600 bg-cover bg-center":
+          purple,
         'bg-slate-50': !purple,
       })}
     >

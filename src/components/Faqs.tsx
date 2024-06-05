@@ -68,7 +68,7 @@ export function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="bg-[url('/images/background-faqs.jpg') ] bg-cover bg-center py-20 sm:py-32"
+      className="bg-[url('/images/background-faqs.jpg')] bg-cover bg-center py-20 sm:py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-2xl md:text-center">
