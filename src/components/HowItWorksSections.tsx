@@ -1,6 +1,6 @@
-import undrawScheduleImage from '@/images/how-it-works/undraw_schedule.svg'
-import undrawPayOnlineImage from '@/images/how-it-works/undraw_pay_online.svg'
-import undrawAgreementImage from '@/images/how-it-works/undraw_agreement.svg'
+import imageUndrawSchedule from '@/images/how-it-works/undraw_schedule.svg'
+import imageUndarawPayOnline from '@/images/how-it-works/undraw_pay_online.svg'
+import imageUndrawAgreement from '@/images/how-it-works/undraw_agreement.svg'
 import { ItemSection } from '@/components/ItemSection'
 
 const sectionItems = [
@@ -13,7 +13,7 @@ const sectionItems = [
     Do it once, KEEP will take it from there with full customisation available at every level.
         `,
     imageSource: {
-      src: undrawScheduleImage,
+      src: imageUndrawSchedule,
       alt: 'undraw schedule',
     },
   },
@@ -26,7 +26,7 @@ const sectionItems = [
     What’s more, KEEP can hold a fully executed contract until payment is received making the process for deliveries more structured.
         `,
     imageSource: {
-      src: undrawPayOnlineImage,
+      src: imageUndarawPayOnline,
       alt: 'undraw pay online',
     },
   },
@@ -38,7 +38,7 @@ const sectionItems = [
     easily and without having to go back to the negotiating table.
         `,
     imageSource: {
-      src: undrawAgreementImage,
+      src: imageUndrawAgreement,
       alt: 'undraw agreement',
     },
   },

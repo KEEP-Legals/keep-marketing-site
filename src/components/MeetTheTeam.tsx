@@ -1,9 +1,9 @@
-import imageAdam from '@/images/headshots/adam-headshot.jpg'
-import imageCampbell from '@/images/headshots/campbell-headshot.jpg'
-import undrawAgreementImage from '@/images/how-it-works/undraw_agreement.svg'
-import undrawScheduleImage from '@/images/how-it-works/undraw_schedule.svg'
-import { ItemSection } from '@/components//ItemSection'
-import { WrapperWithTitle } from '@/components//WrapperWithTitle'
+import imageAdam from '@/images/our-story/adam-headshot.jpg'
+import imageCampbell from '@/images/our-story/campbell-headshot.jpg'
+import imageWhereItAllBegan from '@/images/our-story/where-it-all-began.png'
+import imageOurValues from '@/images/our-story/our-values.png'
+import { ItemSection } from '@/components/ItemSection'
+import { WrapperWithTitle } from '@/components/WrapperWithTitle'
 
 const sectionItems = [
   {
@@ -37,8 +37,8 @@ const sectionItems = [
   {
     title: 'Where it all began',
     imageSource: {
-      src: undrawScheduleImage,
-      alt: 'undraw Schedule',
+      src: imageWhereItAllBegan,
+      alt: 'where it all began',
     },
     text: `
         Our team has lived advertising production for our careers. 
@@ -49,8 +49,8 @@ const sectionItems = [
   {
     title: 'Our values',
     imageSource: {
-      src: undrawAgreementImage,
-      alt: 'undraw agreement',
+      src: imageOurValues,
+      alt: 'our values',
     },
     text: `
         Keep is about looking after every stakeholder in teh creative process. 

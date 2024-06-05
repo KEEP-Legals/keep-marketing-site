@@ -3,6 +3,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { WrapperWithTitle } from '@/components/WrapperWithTitle'
+import React from 'react'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -54,28 +55,36 @@ function CheckIcon({
 function Plan({
   name,
   price,
+  priceSuffix,
+  priceComment = '',
   description,
   href,
   features,
 }: {
   name: string
   price: string
+  priceSuffix: string
+  priceComment?: React.ReactNode
   description: string
   href: string
-  features: Array<string>
+  features: Array<React.ReactNode>
 }) {
   return (
-    <section className="order-first flex flex-col justify-between gap-y-4 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
+    <section className="order-first flex flex-col justify-between items-center gap-y-4 rounded-3xl bg-white px-6 py-8 text-gray-900 sm:px-8 lg:order-none">
       <div>
         <h3 className="font-display text-lg ">{name}</h3>
-        <p className="font-display text-5xl font-light tracking-tight ">
-          {price}
-        </p>
-        <p className="text-base">{description}</p>
+        <div>
+          <p className="font-display text-5xl font-semibold tracking-tight">
+            {price}
+          </p>
+          <p className="font-display font-light">{priceSuffix}</p>
+          <p className="font-display text-sm font-light">{priceComment}</p>
+        </div>
+        {description ? <p className="text-base">{description}</p> : <br />}
       </div>
-      <ul role="list" className="flex flex-col gap-y-3 text-left text-sm">
-        {features.map((feature) => (
-          <li key={feature} className="flex">
+      <ul className="flex flex-col gap-y-3 text-left text-sm">
+        {features.map((feature, index) => (
+          <li key={index} className="flex">
             <CheckIcon />
             <span className="ml-4">{feature}</span>
           </li>
@@ -96,45 +105,83 @@ export function Pricing() {
   return (
     <WrapperWithTitle title="Plans that scale with you">
       <div className="bg-primary-600">
-        <Container className="py-8">
+        <Container className="py-8 flex justify-center">
           <div className="grid max-w-2xl grid-cols-1 gap-y-10 lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:gap-x-8">
             <Plan
               name="Single Project"
-              price="$0"
+              price="£0"
+              priceSuffix="per month"
+              priceComment={
+                <>
+                  Plus <strong>4%</strong> of project usage
+                </>
+              }
               description="Good for running small projects"
               href="/contact-us"
               features={[
-                'Up to 5 users',
-                '1 custom contract',
-                'Access to all of KEEP’s industry-approved contracts',
-                'Automatically renew projects',
+                <>
+                  up to <strong>5 users</strong>
+                </>,
+                <strong key="2">1 custom contract</strong>,
+                <>
+                  Access to <strong>all</strong> of KEEP’s industry-approved
+                  contracts
+                </>,
+                <>
+                  Automatically <strong>renew</strong> projects
+                </>,
               ]}
             />
             <Plan
               name="Advanced Package"
-              price="$1000"
+              price="£1000"
+              priceSuffix="per month"
+              priceComment={
+                <>
+                  Plus <strong>2%</strong> of project usage
+                </>
+              }
               description="Good for medium-sized production companies"
               href="/contact-us"
               features={[
-                'Up to 10 users',
-                '2 custom contracts',
-                'Unlimited access to all of KEEP’s industry-approved contracts',
-                'Automatically renew projects',
-                'Unlimited access to industry-standard documents, including the PIBS',
+                <>
+                  Up to <strong>10 users</strong>
+                </>,
+                <strong key="2">2 custom contracts</strong>,
+                <>
+                  Unlimited access to <strong>all</strong> of KEEP’s
+                  industry-approved contracts
+                </>,
+                <>
+                  Automatically <strong>renew</strong> projects
+                </>,
+                <>
+                  Unlimited access to industry-standard documents, including the{' '}
+                  <strong>PIBS</strong>
+                </>,
               ]}
             />
             <Plan
               name="Enterprise"
               price="Custom"
+              priceSuffix="Let's talk"
               description="Good for enterprice-sized production companies"
               href="/contact-us"
               features={[
-                'Unlimited users',
-                'Unlimited custom contracts',
-                'Unlimited access to all of KEEP’s industry-approved contracts',
-                'Track up to 200 expenses per month',
-                'Automatically renew projects',
-                'Unlimited access to industry-standard documents, including the PIBS',
+                <strong key="1">Unlimited users</strong>,
+                <strong key="2">Unlimited custom contracts</strong>,
+
+                <>
+                  Unlimited access to <strong>all</strong> of KEEP’s
+                  industry-approved contracts
+                </>,
+                <>
+                  Automatically <strong>renew</strong> projects
+                </>,
+                <>
+                  Unlimited access to industry-standard documents, including the{' '}
+                  <strong>PIBS</strong>
+                </>,
               ]}
             />
           </div>

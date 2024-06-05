@@ -5,7 +5,6 @@ import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import Head from 'next/head'
 
 export const metadata: Metadata = {
   title: {
@@ -42,9 +41,6 @@ export default function RootLayout({
         lexend.variable,
       )}
     >
-      <Head>
-        <link rel="preload" as="image" href="/images/hero/hero.webp" />
-      </Head>
       <body className="flex h-full flex-col">
         <Header />
         {children}
