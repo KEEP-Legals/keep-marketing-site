@@ -7,10 +7,10 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="bg-primary-600 pb-28 pt-20 sm:py-32"
+      className="overflow-hidden bg-primary-600 pb-28 pt-20 sm:py-32"
     >
       <Container>
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+        <div className="md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
             Safe and secure contracting and payments
           </h2>
