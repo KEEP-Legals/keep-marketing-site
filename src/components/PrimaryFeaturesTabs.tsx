@@ -19,7 +19,7 @@ const features = [
   {
     title: 'KEEP it streamlined',
     description:
-      'Easily onboard contracts from existing clients. Streamline payments into a single invoice and let the platform process payments directly to IP creators.',
+      'Streamline payments into a single invoice and let the platform process payments directly to IP creators.',
     image: screenshotStreamlined,
   },
   {

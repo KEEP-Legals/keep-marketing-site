@@ -1,3 +1,4 @@
+import { JustEmailForm } from '@/components/JustEmailForm'
 import { MeetTheTeam } from '@/components/MeetTheTeam'
 
 export default function OurStory() {
@@ -5,6 +6,7 @@ export default function OurStory() {
     <>
       <main>
         <MeetTheTeam />
+        <JustEmailForm />
       </main>
     </>
   )

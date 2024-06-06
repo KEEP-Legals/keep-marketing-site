@@ -33,7 +33,7 @@ export function ArtistManagement() {
     <section
       id="artist-management"
       aria-labelledby="talent-contracts-title"
-      className="overflow-hidden bg-slate-50 bg-[url('/images/background-faqs.jpg')] bg-cover bg-center py-20 text-left sm:py-32"
+      className="overflow-hidden bg-slate-50 bg-[url('/images/background-faqs.webp')] bg-cover bg-center py-20 text-left sm:py-32"
     >
       <Container>
         <ul role="list" className="flex flex-col gap-y-8">
