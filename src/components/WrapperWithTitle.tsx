@@ -23,7 +23,7 @@ export function WrapperWithTitle({
       })}
     >
       <div className="mx-auto max-w-2xl py-4">
-        <h2
+        <h1
           className={clsx(
             'font-display text-3xl tracking-tight text-slate-900 sm:text-4xl md:text-center',
             {
@@ -32,7 +32,7 @@ export function WrapperWithTitle({
           )}
         >
           {title}
-        </h2>
+        </h1>
       </div>
       {children}
     </section>

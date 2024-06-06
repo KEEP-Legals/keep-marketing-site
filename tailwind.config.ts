@@ -40,8 +40,8 @@ export default {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: 'var(--font-lexend)',
-        display: 'var(--font-lexend)',
+        sans: 'var(--font-lato)',
+        display: 'var(--font-lato)',
       },
       maxWidth: {
         '2xl': '40rem',
