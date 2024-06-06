@@ -5,6 +5,10 @@ import { FormEventHandler, useState } from 'react'
 
 export function JustEmailForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  /**
+   * Don't work yet
+   */
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     // Don't make a HTTP Request without us.
     e.preventDefault()
@@ -33,6 +37,7 @@ export function JustEmailForm() {
       )
       .finally(() => setIsSubmitting(false))
   }
+
   return (
     <section className="bg-primary-600 py-16 text-white">
       <Container className="flex flex-col justify-center gap-y-8 text-left">
@@ -50,7 +55,7 @@ export function JustEmailForm() {
           className="flex flex-wrap items-center gap-4"
           onSubmit={handleSubmit}
         >
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <label htmlFor="email">Want to know more?</label>
             <input
               type="email"

@@ -5,6 +5,9 @@ import { Button } from './Button'
 import { FormEventHandler, useState } from 'react'
 import { WrapperWithTitle } from './WrapperWithTitle'
 
+/**
+ * Don't work yet
+ */
 export function ContactUs() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
