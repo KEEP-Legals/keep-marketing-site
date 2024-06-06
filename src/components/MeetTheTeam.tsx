@@ -53,7 +53,7 @@ const sectionItems = [
       alt: 'our values',
     },
     text: `
-        Keep is about looking after every stakeholder in teh creative process. 
+        Keep is about looking after every stakeholder in the creative process. 
         We bring transparency where it has been lacking previously. 
         Our reminder system and centralised database allows for all stakeholders in IP rights to know 
         exactly what the terrms are on their contracts and when they are up for renewal. We believe in 

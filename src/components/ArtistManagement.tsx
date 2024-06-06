@@ -1,7 +1,4 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
 
 const points = [
   [
@@ -36,7 +33,7 @@ export function ArtistManagement() {
     <section
       id="artist-management"
       aria-labelledby="talent-contracts-title"
-      className="overflow-hidden bg-slate-50 py-20 sm:py-32 text-left bg-[url('/images/background-faqs.jpg')] bg-cover bg-center"
+      className="overflow-hidden bg-slate-50 bg-[url('/images/background-faqs.jpg')] bg-cover bg-center py-20 text-left sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
