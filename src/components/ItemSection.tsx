@@ -24,9 +24,7 @@ export function ItemSection({
   purple = false,
   reverseOrder = false,
 }: ItemSectionProps) {
-  const backgroundClass = purple
-    ? "bg-primary-600"
-    : 'bg-white'
+  const backgroundClass = purple ? 'bg-primary-600' : 'bg-white'
   const reverseOrderClass = reverseOrder ? 'xl:flex-row-reverse' : ''
   const textColorClass = purple ? 'text-primary-100' : 'text-slate-900'
 

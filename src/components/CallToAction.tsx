@@ -8,7 +8,7 @@ export function CallToAction() {
   return (
     <section
       id="get-started-today"
-      className=" bg-primary-600 bg-[url('/images/background-call-to-action.jpg')] bg-cover bg-center py-32"
+      className=" bg-primary-600 bg-cover bg-center py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">

@@ -1,4 +1,4 @@
-import { MobileNavLink } from '@/components/Header'
+import { MobileNavLink } from '@/components/MobileNavigation'
 import { NavLink } from '@/components/NavLink'
 
 export function NavigationOptions({

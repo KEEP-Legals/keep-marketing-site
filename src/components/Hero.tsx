@@ -5,8 +5,8 @@ import { AppearanceTransition } from './AppearanceTransition'
 
 export function Hero() {
   return (
-    <section
-      className={`bg-[url("/images/hero/hero.png")] bg-cover bg-center py-48`}
+    <section 
+      className={`bg-[url("/images/hero/hero.webp")] top-0 w-full bg-cover bg-center py-48`}
     >
       <AppearanceTransition>
         <Container className="flex flex-col items-start gap-y-6 text-left">
