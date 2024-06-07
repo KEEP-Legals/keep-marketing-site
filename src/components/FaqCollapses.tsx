@@ -1,4 +1,4 @@
-import { FaqDisclosure } from './FaqDisclosure'
+import { FaqDisclosure } from '@/components/FaqDisclosure'
 
 const faqs = [
   {
@@ -63,7 +63,7 @@ const FaqCollapses = () => {
           key={columnIndex}
           question={column.question}
           answer={column.answer}
-          defaultOpen={columnIndex <= 2}
+          defaultOpen={false}
         />
       ))}
     </ul>
