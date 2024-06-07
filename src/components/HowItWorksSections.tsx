@@ -52,7 +52,7 @@ export function HowItWorksSections() {
           key={item.title}
           {...item}
           reverseOrder={itemIndex % 2 === 0}
-          purple={itemIndex % 2 === 0}
+          variant={itemIndex % 2 === 0 ? 'gray' : 'white'}
         />
       ))}
     </section>

@@ -4,6 +4,8 @@ import { Fragment } from 'react'
 import { NavigationOptions } from './NavigationOptions'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { text } from 'stream/consumers'
+import { usePathname } from 'next/navigation'
 
 export function MobileNavLink({
   href,
@@ -19,11 +21,20 @@ export function MobileNavLink({
   )
 }
 
-function MobileNavIcon({ open }: { open: boolean }) {
+function MobileNavIcon({
+  open,
+  variant = 'gray',
+}: {
+  open: boolean
+  variant?: 'white' | 'gray'
+}) {
   return (
     <svg
       aria-hidden="true"
-      className="h-3.5 w-3.5 overflow-visible stroke-slate-700"
+      className={clsx('h-3.5 w-3.5 overflow-visible stroke-slate-700', {
+        'stroke-slate-700': variant === 'gray',
+        'stroke-white': variant === 'white',
+      })}
       fill="none"
       strokeWidth={2}
       strokeLinecap="round"
@@ -47,13 +58,19 @@ function MobileNavIcon({ open }: { open: boolean }) {
 }
 
 export function MobileNavigation() {
+  const pathname = usePathname()
   return (
     <Popover>
       <Popover.Button
         className="relative z-10 flex h-8 w-8 items-center justify-center ui-not-focus-visible:outline-none"
         aria-label="Toggle Navigation"
       >
-        {({ open }) => <MobileNavIcon open={open} />}
+        {({ open }) => (
+          <MobileNavIcon
+            open={open}
+            variant={pathname === '/how-it-works' ? 'white' : 'gray'}
+          />
+        )}
       </Popover.Button>
       <Transition.Root>
         <Transition.Child

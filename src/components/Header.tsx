@@ -8,6 +8,7 @@ import { NavLink } from '@/components/NavLink'
 import { NavigationOptions } from '@/components/NavigationOptions'
 import { MobileNavigation } from './MobileNavigation'
 import { usePathname } from 'next/navigation'
+import { WhiteLogo } from './WhiteLogo'
 
 export function Header() {
   const pathname = usePathname()
@@ -15,26 +16,43 @@ export function Header() {
     <header
       className={clsx('w-full py-10', {
         absolute: pathname === '/',
+        'bg-video-background': pathname === '/how-it-works',
       })}
     >
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
             <Link href="/" aria-label="Home">
-              <Logo className="h-10 w-auto" />
+              {pathname === '/how-it-works' ? (
+                <WhiteLogo className="h-10 w-auto" />
+              ) : (
+                <Logo className="h-10 w-auto" />
+              )}
             </Link>
             <div className="hidden text-white md:flex md:gap-x-6">
               <NavigationOptions
-                textColor={pathname === '/' ? 'white' : 'dark'}
+                textColor={
+                  pathname === '/' || pathname === '/how-it-works'
+                    ? 'white'
+                    : 'dark'
+                }
               />
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="https://app.keeplegals.com/">Sign in</NavLink>
+              <NavLink
+                href="https://app.keeplegals.com/"
+                textColor={pathname === '/how-it-works' ? 'white' : 'dark'}
+              >
+                Sign in
+              </NavLink>
             </div>
-            <Button href="/contact-us" color="blue">
-              <span>Get a demo</span>
+            <Button
+              href="/contact-us"
+              color={pathname === '/how-it-works' ? 'white' : 'blue'}
+            >
+              <span className="text-center">Get a demo</span>
             </Button>
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

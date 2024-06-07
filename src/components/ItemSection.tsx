@@ -13,7 +13,7 @@ type ItemSectionProps = {
     width?: number
     height?: number
   }
-  purple?: boolean
+  variant?: 'white' | 'purple' | 'gray'
   reverseOrder?: boolean
 }
 
@@ -22,18 +22,15 @@ export function ItemSection({
   title,
   subtitle = '',
   imageSource,
-  purple = false,
+  variant = 'white',
   reverseOrder = false,
 }: ItemSectionProps) {
-  const backgroundClass = purple ? 'bg-primary-600' : 'bg-white'
-  const reverseOrderClass = reverseOrder ? 'xl:flex-row-reverse' : ''
-  const textColorClass = purple ? 'text-primary-100' : 'text-slate-900'
-
   return (
     <section
       className={clsx({
-        'bg-primary-600': purple,
-        'bg-slate-50': !purple,
+        'bg-primary-600': variant === 'purple',
+        'bg-slate-50': variant === 'white',
+        'bg-darker-gray': variant === 'gray',
       })}
     >
       <Container id="get-started-today" className="text-left">
@@ -56,8 +53,9 @@ export function ItemSection({
           </AppearanceTransition>
           <div
             className={clsx('flex flex-col gap-y-6', {
-              'text-primary-100': purple,
-              'text-slate-900': !purple,
+              'text-primary-100': variant === 'purple',
+              'text-slate-950': variant === 'gray',
+              'text-slate-900': variant === 'white',
             })}
           >
             <h3 className="text-2xl font-semibold">{title}</h3>

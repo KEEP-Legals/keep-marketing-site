@@ -9,7 +9,7 @@ export default function HowItWorks() {
     <>
       <main>
         <ExplainWhatKeepIsVideo />
-        <WrapperWithTitle title="What can KEEP do for me">
+        <WrapperWithTitle title="What can KEEP do for me" variant="gray">
           <HowItWorksSections />
           <ArtistManagement />
           <JustEmailForm />
