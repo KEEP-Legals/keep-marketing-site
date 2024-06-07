@@ -27,13 +27,10 @@ export function JustEmailForm() {
       body: JSON.stringify(data),
     })
       .then(
-        (response) => {
+        (_response) => {
           target.reset()
-          console.log('Success: ', response.json())
         },
-        (err) => {
-          console.log('Err: ', err)
-        },
+        (_err) => {},
       )
       .finally(() => setIsSubmitting(false))
   }

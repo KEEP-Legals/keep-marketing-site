@@ -29,13 +29,10 @@ export function ContactUs() {
       body: JSON.stringify(data),
     })
       .then(
-        (response) => {
+        (_response) => {
           target.reset()
-          console.log('Success: ', response.json())
         },
-        (err) => {
-          console.log('Err: ', err)
-        },
+        (err) => {},
       )
       .finally(() => setIsSubmitting(false))
   }
