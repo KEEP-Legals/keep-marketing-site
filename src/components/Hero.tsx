@@ -1,7 +1,7 @@
 'use client'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { AppearanceTransition } from './AppearanceTransition'
+import { AppearanceTransition } from '@/components/AppearanceTransition'
 
 export function Hero() {
   return (

@@ -1,15 +1,15 @@
 import { HowItWorksSections } from '@/components/HowItWorksSections'
 import { ArtistManagement } from '@/components/ArtistManagement'
-import { WrapperWithTitle } from '@/components/WrapperWithTitle'
 import { ExplainWhatKeepIsVideo } from '@/components/ExplainWhatKeepIsVideo'
 import { JustEmailForm } from '@/components/JustEmailForm'
+import { WrapperWithTitle } from '@/components/WrapperWithTitle'
 
 export default function HowItWorks() {
   return (
     <>
       <main>
+        <ExplainWhatKeepIsVideo />
         <WrapperWithTitle title="What can KEEP do for me">
-          <ExplainWhatKeepIsVideo />
           <HowItWorksSections />
           <ArtistManagement />
           <JustEmailForm />

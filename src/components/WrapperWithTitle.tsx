@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import { text } from 'stream/consumers'
 
 interface WrapperWithTitleProps {
   title: string
@@ -17,8 +16,7 @@ export function WrapperWithTitle({
       id="pricing"
       aria-label="Pricing"
       className={clsx('relative overflow-hidden  py-20 text-center', {
-        "bg-primary-600":
-          purple,
+        'bg-primary-600': purple,
         'bg-slate-50': !purple,
       })}
     >
