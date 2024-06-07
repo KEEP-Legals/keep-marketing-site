@@ -1,5 +1,6 @@
 import { AppearanceTransition } from '@/components/AppearanceTransition'
 import { Container } from '@/components/Container'
+import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 
 type ItemSectionProps = {
@@ -29,10 +30,20 @@ export function ItemSection({
   const textColorClass = purple ? 'text-primary-100' : 'text-slate-900'
 
   return (
-    <section className={backgroundClass}>
+    <section
+      className={clsx({
+        'bg-primary-600': purple,
+        'bg-slate-50': !purple,
+      })}
+    >
       <Container id="get-started-today" className="text-left">
         <div
-          className={`flex flex-col items-center justify-center py-4 xl:flex-row xl:gap-x-8 ${reverseOrderClass}`}
+          className={clsx(
+            'flex flex-col items-center justify-center py-4 xl:flex-row xl:gap-x-8',
+            {
+              'xl:flex-row-reverse': reverseOrder,
+            },
+          )}
         >
           <AppearanceTransition>
             <figure className="flex items-center justify-center py-2">
@@ -43,7 +54,12 @@ export function ItemSection({
               />
             </figure>
           </AppearanceTransition>
-          <div className={`flex flex-col gap-y-6 ${textColorClass} `}>
+          <div
+            className={clsx('flex flex-col gap-y-6', {
+              'text-primary-100': purple,
+              'text-slate-900': !purple,
+            })}
+          >
             <h3 className="text-2xl font-semibold">{title}</h3>
             {subtitle ? (
               <p className="text-lg font-semibold">{subtitle}</p>

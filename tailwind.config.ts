@@ -22,6 +22,7 @@ export default {
     },
     extend: {
       colors: {
+        'video-background': '#502665',
         primary: {
           950: '#55005b',
           900: '#6a0073',
