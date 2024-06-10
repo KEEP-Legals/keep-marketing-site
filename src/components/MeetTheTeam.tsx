@@ -68,6 +68,7 @@ export function MeetTheTeam() {
       {sectionItems.map((item, itemIndex) => (
         <ItemSection
           key={item.title}
+          imageFetchPriority={itemIndex === 0}
           imageSource={item.imageSource}
           title={item.title}
           subtitle={item.subtitle}

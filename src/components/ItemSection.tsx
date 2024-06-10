@@ -15,6 +15,7 @@ type ItemSectionProps = {
   }
   variant?: 'white' | 'purple' | 'gray'
   reverseOrder?: boolean
+  imageFetchPriority?: boolean
 }
 
 export function ItemSection({
@@ -24,6 +25,7 @@ export function ItemSection({
   imageSource,
   variant = 'white',
   reverseOrder = false,
+  imageFetchPriority = false,
 }: ItemSectionProps) {
   return (
     <section
@@ -45,6 +47,7 @@ export function ItemSection({
           <AppearanceTransition>
             <figure className="flex items-center justify-center py-2">
               <Image
+                priority={imageFetchPriority}
                 className="aspect-[4/5] flex-none object-contain sm:max-w-xl"
                 src={imageSource.src}
                 alt={imageSource.alt}

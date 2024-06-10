@@ -50,6 +50,7 @@ export function HowItWorksSections() {
       {sectionItems.map((item, itemIndex) => (
         <ItemSection
           key={item.title}
+          imageFetchPriority={itemIndex === 0}
           {...item}
           reverseOrder={itemIndex % 2 === 0}
           variant={itemIndex % 2 === 0 ? 'gray' : 'white'}
