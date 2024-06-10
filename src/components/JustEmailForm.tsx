@@ -57,6 +57,7 @@ export function JustEmailForm() {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Adress email"
               autoComplete="email"
               required

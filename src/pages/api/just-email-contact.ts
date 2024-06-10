@@ -20,8 +20,8 @@ export default async function handler(
     await mg.messages.create('mail.keeplegals.com', {
       from: 'Keep Legals <mailer@mail.keeplegals.com>',
       to: ['info@keeplegals.com'],
-      subject: 'Website Contact Form Submission',
-      text: 'Form Submission',
+      subject: 'Website Email Only Form Submission',
+      text: 'Email Form Submission',
       html: `<ul><li><strong>Email:</strong> ${req.body?.email}</li></ul>`,
     })
   } catch (err) {
