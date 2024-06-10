@@ -2,6 +2,7 @@ import { AppearanceTransition } from '@/components/AppearanceTransition'
 import { Container } from '@/components/Container'
 import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
+import * as React from 'react'
 
 type ItemSectionProps = {
   text: JSX.Element | string
@@ -16,17 +17,20 @@ type ItemSectionProps = {
   variant?: 'white' | 'purple' | 'gray'
   reverseOrder?: boolean
   imageFetchPriority?: boolean
+  titleTag?: keyof React.JSX.IntrinsicElements
 }
 
 export function ItemSection({
   text,
   title,
+  titleTag = 'h2',
   subtitle = '',
   imageSource,
   variant = 'white',
   reverseOrder = false,
   imageFetchPriority = false,
 }: ItemSectionProps) {
+  const TitleTag = titleTag
   return (
     <section
       className={clsx({
@@ -61,7 +65,7 @@ export function ItemSection({
               'text-slate-900': variant === 'white',
             })}
           >
-            <h3 className="text-2xl font-semibold">{title}</h3>
+            <TitleTag className="text-2xl font-semibold">{title}</TitleTag>
             {subtitle ? (
               <p className="text-lg font-semibold">{subtitle}</p>
             ) : null}

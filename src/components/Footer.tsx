@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="bg-slate-50">
       <Container>
         <div className="py-16">
-          <Link href="/">
+          <Link href="/" aria-label="Home">
             <Logo className="mx-auto h-10 w-auto" />
           </Link>
           <nav className="mt-10 text-sm" aria-label="quick links">
