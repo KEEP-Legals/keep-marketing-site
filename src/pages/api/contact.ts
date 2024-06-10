@@ -16,9 +16,9 @@ export default async function handler(
   res: NextApiResponse<ResponseData>,
 ) {
   try {
-    const data = await mg.messages.create('mail.keeplegals.com', {
+    await mg.messages.create('mail.keeplegals.com', {
       from: 'Keep Legals <mailer@mail.keeplegals.com>',
-      to: ['shane@ivodigital.com', 'info@keeplegals.com'],
+      to: ['info@keeplegals.com'],
       subject: 'Website Contact Form Submission',
       text: req.body?.message ?? 'Form Submission',
       html: `<ul><li><strong>First name:</strong> ${req.body?.first_name}</li><li><strong>Last name:</strong> ${req.body?.last_name}</li><li><strong>Company:</strong> ${req.body?.company}</li><li><strong>Email:</strong> ${req.body?.email}</li><li><strong>Message:</strong> ${req.body?.message}</li></ul>`,
