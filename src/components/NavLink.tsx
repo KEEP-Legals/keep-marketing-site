@@ -14,7 +14,7 @@ export function NavLink({
     <Link
       href={href}
       className={clsx(
-        'inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900',
+        'inline-block rounded-lg px-2 py-1 text-slate-700 hover:bg-slate-100 hover:text-slate-900',
         {
           'text-white': textColor === 'white',
         },

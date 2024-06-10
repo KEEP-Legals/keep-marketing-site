@@ -1,5 +1,3 @@
-import { Container } from '@/components/Container'
-
 export function ExplainWhatKeepIsVideo() {
   return (
     <video

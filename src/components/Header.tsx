@@ -6,9 +6,9 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { NavigationOptions } from '@/components/NavigationOptions'
-import { MobileNavigation } from './MobileNavigation'
+import { MobileNavigation } from '@/components/MobileNavigation'
 import { usePathname } from 'next/navigation'
-import { WhiteLogo } from './WhiteLogo'
+import { WhiteLogo } from '@/components/WhiteLogo'
 
 export function Header() {
   const pathname = usePathname()
@@ -29,7 +29,7 @@ export function Header() {
                 <Logo className="h-10 w-auto" />
               )}
             </Link>
-            <div className="hidden text-white lg:flex lg:gap-x-6">
+            <div className="hidden xl:text-lg text-white lg:flex lg:gap-x-6">
               <NavigationOptions
                 textColor={
                   pathname === '/' || pathname === '/how-it-works'
@@ -40,7 +40,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden lg:block">
+            <div className="hidden xl:text-lg lg:block">
               <NavLink
                 href="https://app.keeplegals.com/"
                 textColor={pathname === '/how-it-works' ? 'white' : 'dark'}
@@ -52,7 +52,9 @@ export function Header() {
               href="/contact-us"
               color={pathname === '/how-it-works' ? 'white' : 'blue'}
             >
-              <span className="text-center">Get a demo</span>
+              <span className="text-center text-base xl:text-lg">
+                Get a demo
+              </span>
             </Button>
             <div className="-mr-1 lg:hidden">
               <MobileNavigation />
