@@ -19,7 +19,7 @@ export function JustEmailForm() {
     const target = e.currentTarget
 
     setIsSubmitting(true)
-    fetch('/api/contact', {
+    fetch('/api/just-email-contact', {
       headers: {
         'Content-Type': 'application/json',
       },
