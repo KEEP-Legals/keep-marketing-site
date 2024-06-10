@@ -11,19 +11,19 @@ import screenshotAutomated from '@/images/screenshots/keep-it-automated.png'
 
 const features = [
   {
-    title: 'KEEP it secure',
+    title: 'secure',
     description:
       'Safeguard usage rights with bespoke or templated contracts from leading media law firms via our secure asset management tool.',
     image: screenshotSecure,
   },
   {
-    title: 'KEEP it streamlined',
+    title: 'streamlined',
     description:
       'Streamline payments into a single invoice and let the platform process payments directly to IP creators.',
     image: screenshotStreamlined,
   },
   {
-    title: 'KEEP it automated',
+    title: 'automated',
     description:
       'Seamlessly extend and renew contracts at a single click with automated reminders. Say goodbye to broken, incomplete, or lapsed usage contracts.',
     image: screenshotAutomated,
@@ -58,8 +58,11 @@ export function PrimaryFeaturesTabs() {
     >
       {({ selectedIndex }) => (
         <>
-          <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
-            <Tab.List className="relative z-10 flex flex-col gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:flex-row sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+          <div className="-mx-4 flex flex-col overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+            <span className="mb-3 px-4 text-lg text-white sm:hidden">
+              KEEP it:
+            </span>
+            <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:flex-row sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
               {features.map((feature, featureIndex) => (
                 <div
                   key={feature.title}
@@ -73,13 +76,14 @@ export function PrimaryFeaturesTabs() {
                   <h3>
                     <Tab
                       className={clsx(
-                        'font-display text-lg ui-not-focus-visible:outline-none',
+                        'test-xs flex gap-x-1 font-display ui-not-focus-visible:outline-none sm:text-lg',
                         selectedIndex === featureIndex
                           ? 'text-primary-600 lg:text-white'
                           : 'text-primary-100 hover:text-white lg:text-white',
                       )}
                     >
                       <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+                      <span className="hidden sm:block">KEEP it </span>
                       {feature.title}
                     </Tab>
                   </h3>
