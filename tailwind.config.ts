@@ -22,12 +22,14 @@ export default {
     },
     extend: {
       colors: {
+        'darker-gray': '#CACACA',
+        'video-background': 'rgb(84 38 101)',
         primary: {
           950: '#55005b',
           900: '#6a0073',
           800: '#82138a',
           700: '#9c3ea4',
-          600: '#b14eba',
+          600: '#55005b',
           500: '#cd72d2',
           400: '#e38fe8',
           300: '#f2b5f0',
@@ -40,8 +42,8 @@ export default {
         '4xl': '2rem',
       },
       fontFamily: {
-        sans: 'var(--font-lexend)',
-        display: 'var(--font-lexend)',
+        sans: 'var(--font-lato)',
+        display: 'var(--font-lato)',
       },
       maxWidth: {
         '2xl': '40rem',
