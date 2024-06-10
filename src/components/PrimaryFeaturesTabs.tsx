@@ -110,7 +110,7 @@ export function PrimaryFeaturesTabs() {
                     {feature.description}
                   </p>
                 </div>
-                <div className="mt-10 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-primary-900/20 sm:w-[45rem] sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                <div className="mt-10 overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-primary-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                   <Image
                     className="w-full"
                     src={feature.image}
