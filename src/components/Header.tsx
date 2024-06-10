@@ -29,7 +29,7 @@ export function Header() {
                 <Logo className="h-10 w-auto" />
               )}
             </Link>
-            <div className="hidden text-white md:flex md:gap-x-6">
+            <div className="hidden text-white lg:flex lg:gap-x-6">
               <NavigationOptions
                 textColor={
                   pathname === '/' || pathname === '/how-it-works'
@@ -40,7 +40,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <NavLink
                 href="https://app.keeplegals.com/"
                 textColor={pathname === '/how-it-works' ? 'white' : 'dark'}
@@ -54,7 +54,7 @@ export function Header() {
             >
               <span className="text-center">Get a demo</span>
             </Button>
-            <div className="-mr-1 md:hidden">
+            <div className="-mr-1 lg:hidden">
               <MobileNavigation />
             </div>
           </div>
