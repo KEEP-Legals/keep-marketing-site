@@ -3,7 +3,7 @@ import { Container } from '@/components/Container'
 const points = [
   {
     title: 'Artist Management',
-    body: "KEEP is the advertising industry's premier solution for ensuring the safety and security of contracts and payments. What does this mean for IP holders (talent) and Management?",
+    body: "KEEP is the advertising industry's premier solution for ensuring the safety and security of contracts and payments. What does this mean for IP holders (Talent) and Management?",
   },
   {
     title: 'Transparent Contracting',
