@@ -1,14 +1,14 @@
 import { Lato } from 'next/font/google'
 import clsx from 'clsx'
 import '@/styles/tailwind.css'
-import { type Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { GoogleTagManager } from '@next/third-parties/google'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Keep',
+    template: 'Keep - %s',
     default: 'Keep - Usage rights made easy',
   },
   description:
